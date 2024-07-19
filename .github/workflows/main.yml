@@ -4,5 +4,5 @@ jobs:
   greeting:
     runs-on: ubuntu-latest
       steps:
-       - name: Greeting!
+       - name: Greetings!
          run: echo hello world
