@@ -9,8 +9,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.10", "3.11", "3.13.0-beta.3"]
+        python-version: ["3.10", "3.11"]
         allow_failture: [false]
+        include:
+          - python-version: "3.13.0-beta.3"
+            allow_failture: true
+          - python-version: "2.3.12"
+            allow_failture: true
     steps:
       - uses: actions/checkout@v3
 
